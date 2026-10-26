@@ -1,0 +1,36 @@
+# FEST MDS408 PRO — Android UI Prototype v0.2
+
+Native Kotlin + Jetpack Compose starter project for a 4-input / 8-output FEST MDS 408 DSP controller.
+
+## Included in v0.2
+- Dark professional DSP interface
+- 4 input and 8 output channel selection
+- Gain and mute controls
+- Output limiter threshold
+- PEQ frequency, gain and Q controls
+- Delay control
+- XOVER high-pass / low-pass controls
+- Demo input/output meters
+- Save and recall a demo preset locally in app memory during the current session
+
+## Important
+This is still a **UI prototype**. Controls change local app state only. They do not control a real FEST MDS 408 yet. The USB command protocol and parameter mapping have not been verified. Do not rely on this app for live sound system safety or assume changes have been sent to hardware.
+
+## Build
+1. Extract the ZIP.
+2. Open the `FEST_MDS408_PRO_v02` folder in Android Studio.
+3. Allow Gradle sync.
+4. Run on an Android device or emulator (Android 8.0+).
+
+The Android project is source code; it is not an APK. An APK must be built with Android Studio/Gradle.
+
+## Build APK with GitHub Actions (phone-only workflow)
+1. Create a private GitHub repository named `FEST-MDS408-PRO`.
+2. Extract this ZIP on your phone.
+3. In the repository, use **Add file → Upload files** and upload the extracted project contents, including the hidden `.github/workflows/android-build.yml` file. If your phone file picker hides dot-folders, use GitHub's **Add file → Create new file** to create `.github/workflows/android-build.yml` and paste the workflow contents from this file.
+4. Commit the files to the `main` branch.
+5. Open the repository's **Actions** tab, select **Build FEST MDS408 PRO APK**, and press **Run workflow** if it hasn't started automatically.
+6. When the run succeeds, open the run and download the `FEST-MDS408-PRO-debug-apk` artifact ZIP. Extract it to get `app-debug.apk`.
+7. Install the APK on your phone. Android may ask permission to install apps from your browser/files app.
+
+The APK is a debug build for testing. It is not a signed production release.
